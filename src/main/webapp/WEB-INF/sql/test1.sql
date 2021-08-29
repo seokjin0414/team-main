@@ -54,4 +54,6 @@ ON a.emp_no = b.emp_no
 SELECT * FROM departments;
 SELECT * FROM employees;
 SELECT * FROM departments;
-SELECT * FROM tbl_member_auth;
+SELECT * FROM Member;
+
+
