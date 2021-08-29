@@ -9,19 +9,25 @@
 
 <%@ include file="/WEB-INF/subModules/bootstrapHeader.jsp"%>
 
-<script>
-$(document).ready(function() {
-	$(".valuesAdditionalWrapper-2KhwsEwE:nth-child(5)").attr()
-	
-});
+<style>
+#body {
+	background-color: #e9ecef;
+}
+</style>
 
+<script>
+	$(document).ready(function() {
+		$(".valuesAdditionalWrapper-2KhwsEwE:nth-child(5)").attr()
+
+	});
 </script>
 
 <title>Insert title here</title>
 </head>
-<body>
+<body id="body">
 	<div class="container">
-
+	<div class="row row-col-md-4">
+	<div class="col">
 		<!-- TradingView Widget BEGIN -->
 		<div class="tradingview-widget-container">
 			<div id="tradingview_6b067"></div>
@@ -44,9 +50,47 @@ $(document).ready(function() {
 			</script>
 		</div>
 		<!-- TradingView Widget END -->
+		</div>
+		
+		<div class="col-lg-3">
+	
+		<br>
+		<br>
+		<br>
+	<input type="text" name="idA" class="btn btn-success btn-lg" readonly value="현재가" id="input3">
+	<div class="input-group" id="i31">
+	<input type="text" name="idA" class="form-control" value="48757.43" id="input3">
+	<div class="input-group-append">
+    <span class="input-group-text" id="basic-addon3">USD$</span>
+    </div>
+    </div>
+		<br>
+		<form action="">
+			<div class="btn-group btn-group-toggle" data-toggle="buttons">
+				<label class="btn btn-outline-success active btn-lg">
+				<input type="radio" name="options" id="option1" checked> Buy
+				</label>
+				<label class="btn btn-outline-success btn-lg">
+				<input type="radio" name="options" id="option2"> Sell
+				</label>
+			</div>
+			<br>
+	<div class="input-group" id="i1">
+	<input type="text" name="idA" class="form-control" placeholder="주문 금액" id="input1">
+	<div class="input-group-append">
+    <span class="input-group-text" id="basic-addon2">SUSD$</span>
+    </div>
+ 	</div>
+    <div class="input-group" id="i2">
+    <input type="text" id="custom-selectDirect" class="form-control" name="idC" placeholder="주문량">
+    <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon3">개</span>
+    <button class="btn btn-outline-success" id="but2" type="button">주문하기</button>
 	</div>
-
-
+	</div>	
+		</form>
+	    </div>
+</div>
 	</div>
 </body>
 </html>
