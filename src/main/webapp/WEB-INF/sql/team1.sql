@@ -15,6 +15,18 @@ CONSTRAINT user_auth_user_id
 FOREIGN KEY (user_id) REFERENCES team1_user(user_id) ON DELETE CASCADE
 );
 
+delimiter \
+CREATE TRIGGER trigger_user_auth_set
+AFTER INSERT ON team1_user
+FOR EACH ROW
+BEGIN 
+INSERT INTO team1_user_auth
+SET user_id = NEW.user_id; 
+END;
+\
+delimiter;
+
+
 CREATE TABLE team1_user_account(
 	user_account_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id VARCHAR(30) NOT NULL,

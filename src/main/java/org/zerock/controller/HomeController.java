@@ -41,4 +41,9 @@ public class HomeController {
 	public void tt() {
 		
 	}
+	
+	@RequestMapping(value = "/aa")
+	public void aa() {
+		
+	}
 }

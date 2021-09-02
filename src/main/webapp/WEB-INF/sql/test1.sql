@@ -51,9 +51,30 @@ ON d.dept_no = dm.dept_no
 ) b
 ON a.emp_no = b.emp_no
 ;
-SELECT * FROM departments;
-SELECT * FROM employees;
-SELECT * FROM departments;
-SELECT * FROM Member;
+
+INSERT INTO team1_user
+(user_id, user_pw, user_first_name, user_last_name, user_phone, user_address)
+VALUES
+('shin', 123, 'shin', 'seokjin', '010-1111-1111', '서울시 동작구 대방동')
+;
+INSERT INTO team1_user_account
+(user_id, user_account_name, user_account_susd)
+VALUES
+('shin', '대방동 투기꾼',10000000);
+
+INSERT INTO team1_trade_buy
+(user_account_id, trade_buy_class, trade_buy_price, trade_buy_quota, trade_buy_remaining)
+VALUES
+(1, 'bitcoin', 2000, 20, 20);
+
+UPDATE team1_trade_buy
+SET trade_buy_state = '주문취소'
+WHERE trade_buy_id = 1;
+
+
+SELECT*FROM team1_user;
+SELECT*FROM team1_user_auth;
+SELECT*FROM team1_user_account;
+SELECT*FROM team1_trade_buy;
 
 
