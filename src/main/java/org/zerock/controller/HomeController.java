@@ -37,13 +37,14 @@ public class HomeController {
 		return "/home";
 	}
 	
-	@RequestMapping(value = "/tt")
-	public void tt() {
+	@RequestMapping(value = "/testtt")
+	public void testT() {
 		
 	}
 	
-	@RequestMapping(value = "/aa")
-	public void aa() {
+	@RequestMapping(value = "/testaa")
+	public void testA() {
 		
 	}
+	
 }
